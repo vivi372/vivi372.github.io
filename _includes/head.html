@@ -111,10 +111,10 @@
 
   <script>   
     document.addEventListener("DOMContentLoaded", function(){
-
+      document.getElementById('hit-counter').style.display="none";
       const hitCounterUrl = `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url }}{{ page.url }}&count_bg=%23000000&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=hit&edge_flat=false&${Date.now()}`;
-      console.log(hitCounterUrl);
       document.getElementById('hit-counter').src = hitCounterUrl;
+      document.getElementById('hit-counter').style.display="block";
 
     });
   </script>
