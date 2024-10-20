@@ -144,19 +144,18 @@ tail_includes:
 
           {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
         {% endif %}
-      </div>
+      </div>     
 
-      <script src="https://utteranc.es/client.js"
+      {% include post-sharing.html lang=lang %}
+    </div>
+    <script src="https://utteranc.es/client.js"
         repo="vivi372 / vivi372.github.io"
         issue-term="pathname"
         label="comments"
         theme="github-dark"
         crossorigin="anonymous"
         async>
-      </script>
-
-      {% include post-sharing.html lang=lang %}
-    </div>
+    </script>
     <!-- .post-tail-bottom -->
   </div>
   <!-- div.post-tail-wrapper -->
