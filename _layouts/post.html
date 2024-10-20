@@ -13,6 +13,12 @@ tail_includes:
 
 <article class="px-1">
   <header>
+
+    <script>
+      // 현재 시간을 쿼리 문자열로 추가하여 캐시 방지
+      const hitCounterUrl = `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url }}{{ page.url }}&count_bg=%23000000&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=hit&edge_flat=false&${Date.now()}`;
+      document.getElementById('hit-counter').src = hitCounterUrl;
+    </script>
     
     <h1 data-toc-skip>{{ page.title }}</h1>    
     {% if page.description %}
@@ -20,7 +26,7 @@ tail_includes:
     {% endif %}
 
     <div class="post-meta text-muted">      
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url }}{{ page.url }}&title=Post%20Views" alt="Post Views">
+      <img id="hit-counter" src="" alt="Post Views">
       <!-- published date -->
       <span>
         {{ site.data.locales[lang].post.posted }}
