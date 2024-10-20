@@ -99,6 +99,16 @@
 
   <!-- JavaScript -->
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPB1760MGR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-JPB1760MGR');
+  </script>
+
   {% unless site.theme_mode %}
     {% include mode-toggle.html %}
   {% endunless %}
