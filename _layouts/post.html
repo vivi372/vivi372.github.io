@@ -8,18 +8,15 @@ tail_includes:
   - post-nav
   - comments
 ---
-
+ <script>
+    // 현재 시간을 쿼리 문자열로 추가하여 캐시 방지
+    const hitCounterUrl = `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url }}{{ page.url }}&count_bg=%23000000&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=hit&edge_flat=false&${Date.now()}`;
+    document.getElementById('hit-counter').src = hitCounterUrl;
+</script>
 {% include lang.html %}
 
 <article class="px-1">
-  <header>
-
-    <script>
-      // 현재 시간을 쿼리 문자열로 추가하여 캐시 방지
-      const hitCounterUrl = `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url }}{{ page.url }}&count_bg=%23000000&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=hit&edge_flat=false&${Date.now()}`;
-      document.getElementById('hit-counter').src = hitCounterUrl;
-    </script>
-    
+  <header>    
     <h1 data-toc-skip>{{ page.title }}</h1>    
     {% if page.description %}
       <p class="post-desc fw-light mb-4">{{ page.description }}</p>
