@@ -14,15 +14,18 @@ tail_includes:
 <article class="px-1">
   <header>
     
-    <h1 data-toc-skip>{{ page.title }}</h1>
-    <a href="https://hits.seeyoufarm.com">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fvivi372.github.io%2Fposts%2F%257B%257B%2520page.title%2520%257D%257D%2F&count_bg=%23000000&title_bg=%23000000&icon=readthedocs.svg&icon_color=%23E7E7E7&title=hit&edge_flat=false"/>
-    </a>
+    <h1 data-toc-skip>{{ page.title }}</h1>    
     {% if page.description %}
       <p class="post-desc fw-light mb-4">{{ page.description }}</p>
     {% endif %}
 
     <div class="post-meta text-muted">
+      <div style="float: right;">
+        <a href="https://hits.seeyoufarm.com">
+          <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fvivi372.github.io%2Fposts%2F%257B%257B%2520page.title%2520%257D%257D%2F&count_bg=%23000000&title_bg=%23000000&icon=readthedocs.svg&icon_color=%23E7E7E7&title=hit&edge_flat=false"
+            alt=""/>
+        </a>
+      </div>
       <!-- published date -->
       <span>
         {{ site.data.locales[lang].post.posted }}
